@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/font/Montserrat-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  color: #1b2522;
+  font-size: 1.4rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER SECTION */
+.full-screen-header {
+  height: 100vh;
+  background-image: url(img/header_image.jpg);
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* 
+  gap: 15px; -> I can use gap intead 
+  of the margin-top for the sub-title
+  */
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2522;
+  padding: 0.5em 1em;
+}
+
+.nav-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 60px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  border-radius: 10em;
+  padding: 0.2em 1em;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsl(200, 100%, 40%);
+}
+
+.scroll-down-icon {
+  position: absolute;
+  bottom: 1em;
+  width: 30px;
+}
+/*SECTION CURRICULUM*/
+
+.section {
+  padding: 2em;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  color: black;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 450px));
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 10px;
+}
+
+.curriculum-grid-item img {
+  width: 50px;
+  margin-right: 1em; /* Using GAP in .curriculum-grid-item for flexbox*/
+}
+
+.curriculum-grid-item {
+  display: flex;
+  align-items: center;
+}
+
+/* PRICING SECTION */
+
+.section-accent {
+  background-color: rgb(75, 165, 241);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.free-title {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.free-sub-title {
+  color: white;
+  max-width: 400px;
+}
+
+/* FORM SECTION */
+
+.form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form label {
+  color: black;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin: 0.2em 0 0.5em 0;
+  outline: none;
+  border: 2px solid #1b2522;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: rgb(75, 165, 241);
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 75px;
+  max-height: 200px;
+}
+
+.btn-container {
+  text-align: end;
+}
+
+.form button {
+  border-radius: 0.3em;
+}
